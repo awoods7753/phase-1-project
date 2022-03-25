@@ -2,9 +2,20 @@ body {
     background: lightgray;
 }
 
-
 #character-card {
     border-color: grey;
     float: left;
     width: 20%;
+}
+
+#like-button {
+    border-color: navy;
+    background-color: rgb(209, 202, 202);
+    
+}
+
+#banner-img {
+    border: 10px;
+    border-color: black;
+    border-style: double;
 }
