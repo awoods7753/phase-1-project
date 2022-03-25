@@ -1,0 +1,10 @@
+body {
+    background: lightgray;
+}
+
+
+#character-card {
+    border-color: grey;
+    float: left;
+    width: 20%;
+}
