@@ -5,7 +5,7 @@ body {
 #character-card {
     border-color: grey;
     float: left;
-    width: 20%;
+    width: 19%;
 }
 
 #like-button {
@@ -20,25 +20,32 @@ body {
     border-style: double;
 }
 
+#bottom-reel {
+    width: 1200px;
+    padding-top:20px;
+    padding-left:15px;
+    padding-right:15px;
+}
+
 #pie-chart-left {
     float: left;
-    width: 25%;
+    width: 600px;
     height: 280px;
-    margin-top: 70px;
+    margin-top: 30px;
+    margin-left: 20px;
 }
 
 #form-middle {
     float: left;
-    width: 50%;
+    width: 400px;
     height: 280px;
-    margin-top: 70px;
+    margin-top: 30px;
 }
 
 #video-trailer-right {
     float: right;
-    width: 25%;
-    height: 280px;
-    margin-top: 70px;
+    width: 180px;
+    margin-top: 30px;
 }
 
 hr {
