@@ -32,8 +32,9 @@ function addOneCharacter(characters) {
     votes.innerText = `Votes: ${characters.votes}`
     votes.id = "votes-id"
 
+    
     card.append(name, img, description, likebutton, votes)
-    characterContainer.append(card)
+    characterContainer.append(card, nextButton)
 }
 //Adding the ability for the vote button to increment the db.json votes #
 
@@ -63,4 +64,10 @@ function addOneCharacter(characters) {
 //     votesNumber++
 // }
 
-//Function to add the submit form to the bottom-reel of the website
+//submit function on the form with an alert and reset
+let submitButton = document.querySelector('#form')
+submitButton.addEventListener('submit', (event) => {
+    event.preventDefault()
+    alert("Thank you for your submission!")
+    submitButton.reset();
+})
