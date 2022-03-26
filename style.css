@@ -19,3 +19,34 @@ body {
     border-color: black;
     border-style: double;
 }
+
+#pie-chart-left {
+    float: left;
+    width: 25%;
+    height: 280px;
+    margin-top: 70px;
+}
+
+#form-middle {
+    float: left;
+    width: 50%;
+    height: 280px;
+    margin-top: 70px;
+}
+
+#video-trailer-right {
+    float: right;
+    width: 25%;
+    height: 280px;
+    margin-top: 70px;
+}
+
+hr {
+    width: 100%;
+    height: 2px;
+    background-color: rgb(7, 7, 7);
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
