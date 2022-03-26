@@ -32,10 +32,13 @@ function addOneCharacter(characters) {
     votes.innerText = `Votes: ${characters.votes}`
     votes.id = "votes-id"
 
-    
     card.append(name, img, description, likebutton, votes)
-    characterContainer.append(card, nextButton)
+    characterContainer.append(card)
 }
+
+
+
+
 //Adding the ability for the vote button to increment the db.json votes #
 
 // let addAVote = (characters) => {
