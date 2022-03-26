@@ -68,5 +68,8 @@ hr {
 #next-button {
     float: right;
     margin-top: 180px;
-    font-size: 80px;
+    font-size: 50px;
+    border-color: navy;
+    background-color: black;
+    color: white;
 }

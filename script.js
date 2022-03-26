@@ -36,7 +36,18 @@ function addOneCharacter(characters) {
     characterContainer.append(card)
 }
 
-
+//Adding functionality to the next-button
+document.getElementById('next-button').addEventListener('click', (e) => {
+    e.preventDefault()
+    fetch('http://localhost:3000/characters')
+    .then(resp=>resp.json())
+    .then(characters => {
+        console.log("characters", characters)
+        characters.forEach((character) => {
+            addOneCharacter(character)
+        })
+    })
+})
 
 
 //Adding the ability for the vote button to increment the db.json votes #
