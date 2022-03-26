@@ -1,56 +1,74 @@
 {
-    "characters": [
+  "characters": [
     {
-        "id": "1",
-        "name": "Thomas Shelby",
-        "image": "https://i.imgur.com/utA2pWc.jpg",
-        "description": "War hero, runs family"
+      "id": "1",
+      "name": "Thomas Shelby",
+      "image": "https://i.imgur.com/utA2pWc.jpg",
+      "description": "War hero, runs family",
+      "votes": 241
     },
     {
-        "id": "2",
-        "name": "Arthur Shelby",
-        "image": "https://i.imgur.com/QRq8quU.jpg",
-        "description": "War hero, the wild one"
-    },{
-        "id": "3",
-        "name": "Ada Shelby",
-        "image": "https://i.imgur.com/eBfCuJH.jpg",
-        "description": "Level headed, Tommy's Sister"
-    },{
-        "id": "4",
-        "name": "Finn Shelby",
-        "image": "https://i.imgur.com/4bxypgR.jpg",
-        "description": "Sheltered, the youngest brother"
-    },{
-        "id": "5",
-        "name": "John Shelby",
-        "image": "https://i.imgur.com/9dCWm43.jpg",
-        "description": "Highly intelligent younger brother"
-    },{
-        "id": "6",
-        "name": "Grace Shelby",
-        "image": "https://i.imgur.com/GnGNkra.jpg",
-        "description": "Tommy's wife"
-    },{
-        "id": "7",
-        "name": "Polly Shelby",
-        "image": "https://i.imgur.com/XD2Ns0b.jpg",
-        "description": "Matriarch of the family"
-    },{
-        "id": "8",
-        "name": "Alfie Solomons",
-        "image": "https://i.imgur.com/1Qi4PqL.jpg",
-        "description": "A very likeable villain"
-    },{
-        "id": "9",
-        "name": "Freddie Thorne",
-        "image": "https://i.imgur.com/Zyjuqqn.jpg",
-        "description": "Communist, marries Ada"
-    },{
-        "id": "10",
-        "name": "Michael Grey",
-        "image": "https://i.imgur.com/wdckNvS.jpg",
-        "description": "Ends up a villain, Polly's son"
+      "id": "2",
+      "name": "Arthur Shelby",
+      "image": "https://i.imgur.com/QRq8quU.jpg",
+      "description": "War hero, the wild one",
+      "votes": 220
+    },
+    {
+      "id": "3",
+      "name": "Ada Shelby",
+      "image": "https://i.imgur.com/eBfCuJH.jpg",
+      "description": "Level headed, Tommy's Sister",
+      "votes": 75
+    },
+    {
+      "id": "4",
+      "name": "Finn Shelby",
+      "image": "https://i.imgur.com/4bxypgR.jpg",
+      "description": "Sheltered, the youngest brother",
+      "votes": 36
+    },
+    {
+      "id": "5",
+      "name": "John Shelby",
+      "image": "https://i.imgur.com/9dCWm43.jpg",
+      "description": "Highly intelligent younger brother",
+      "votes": 202
+    },
+    {
+      "id": "6",
+      "name": "Grace Shelby",
+      "image": "https://i.imgur.com/GnGNkra.jpg",
+      "description": "Tommy's wife",
+      "votes": 120
+    },
+    {
+      "id": "7",
+      "name": "Polly Shelby",
+      "image": "https://i.imgur.com/XD2Ns0b.jpg",
+      "description": "Matriarch of the family",
+      "votes": 89
+    },
+    {
+      "id": "8",
+      "name": "Alfie Solomons",
+      "image": "https://i.imgur.com/1Qi4PqL.jpg",
+      "description": "A very likeable villain",
+      "votes": 190
+    },
+    {
+      "id": "9",
+      "name": "Freddie Thorne",
+      "image": "https://i.imgur.com/Zyjuqqn.jpg",
+      "description": "Communist, marries Ada",
+      "votes": 19
+    },
+    {
+      "id": "10",
+      "name": "Michael Grey",
+      "image": "https://i.imgur.com/wdckNvS.jpg",
+      "description": "Ends up a villain, Polly's son",
+      "votes": 62
     }
- ]
+  ]
 }
