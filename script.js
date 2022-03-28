@@ -126,10 +126,8 @@ function showHighestVotedCharacter(characters) {
     let card = document.createElement('div')
     let votedCharacterImage = document.createElement('img')
     votedCharacterImage.src = characters.image
-    let votedCharacterVotes = document.createElement('h5')
-    votedCharacterVotes.innerText = `Votes: ${characters.votes}`
 
-    card.append(votedCharacterImage, votedCharacterVotes)
+    card.append(votedCharacterImage)
     highestVotedContainer.append(card)
 }
 
