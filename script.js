@@ -120,3 +120,31 @@ submitButton.addEventListener('submit', (event) => {
     submitButton.reset();
 })
 
+//function to append highest voted character to the DOM on button click
+function showHighestVotedCharacter(characters) {
+    let highestVotedContainer = document.getElementById('highest-voted')
+    let card = document.createElement('div')
+    let votedCharacterImage = document.createElement('img')
+    votedCharacterImage.src = characters.image
+    let votedCharacterVotes = document.createElement('h5')
+    votedCharacterVotes.innerText = `Votes: ${characters.votes}`
+
+    card.append(votedCharacterImage, votedCharacterVotes)
+    highestVotedContainer.append(card)
+}
+
+//descends characters by votes with fetch, then displays the first character on the list to
+//get the highest voted character
+let fetchCharactersThree = () => {
+    fetch('http://localhost:3000/characters?_sort=votes&_order=desc')
+    .then(resp=>resp.json())
+    .then(characters => showHighestVotedCharacter(characters[0])
+)}
+
+fetchCharactersThree();
+
+//click event for the highest voted button to unhide the highest character
+document.getElementById('highest-voted-button').addEventListener('click', (e) => {
+    e.preventDefault()
+        document.getElementById('highest-voted').classList.toggle("classname")
+})
