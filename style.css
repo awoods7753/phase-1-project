@@ -73,3 +73,7 @@ hr {
     background-color: black;
     color: white;
 }
+
+.classname {
+    display: none;
+}
