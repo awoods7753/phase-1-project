@@ -25,12 +25,12 @@ let addAVote = (characters, e) => {
                  Accept: "application/json"
              },
         body: JSON.stringify({
-           votes: characters.votes++
+           votes: characters.votes + 1
         })
     
     })
     .then(resp => resp.json())
-    .then(votes => console.log(votes))
+    .then(votes => votes.innerText = `Votes: ${characters.votes}`)
     alert('Thank you for voting!')
 } else {
     alert('You already voted!')
@@ -91,7 +91,7 @@ function addAllCharactersTwo(characters) {
     let likebutton = document.createElement('button')
     likebutton.innerHTML = 'Vote! By Order of the Peaky Blinders!'
     likebutton.id = "like-button"
-    likebutton.addEventListener('click', () => addAVote(characters))
+    likebutton.addEventListener('click', (e) => addAVote(characters, e))
 
     let votes = document.createElement('h5')
     votes.innerText = `Votes: ${characters.votes}`
