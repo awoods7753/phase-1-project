@@ -11,6 +11,27 @@ let fetchCharacters = () => {
 }
 fetchCharacters();
 
+//Adding the ability for the vote button to increment the db.json votes #
+// let clicked = false;
+let addAVote = (characters) => {
+    
+    fetch(`http://localhost:3000/characters/${characters.id}`, {
+        method: "PATCH",
+        headers: 
+             {
+                 "Content-Type":"application/json",
+                 Accept: "application/json"
+             },
+        body: JSON.stringify({
+           votes: characters.votes++
+        })
+    
+    })
+    .then(resp => resp.json())
+    .then(votes => console.log(votes))
+}
+
+
 //function to add the first five characters and their information to the character card on the DOM
 function addAllCharacters(characters) {
     let characterContainer = document.getElementById('characters-container')
@@ -26,7 +47,7 @@ function addAllCharacters(characters) {
     let likebutton = document.createElement('button')
     likebutton.innerHTML = 'Vote! By Order of the Peaky Blinders!'
     likebutton.id = "like-button"
-    likebutton.addEventListener('click', (e) => addAVote(e))
+    likebutton.addEventListener('click', () => addAVote(characters))
 
     let votes = document.createElement('h5')
     votes.innerText = `Votes: ${characters.votes}`
@@ -64,7 +85,7 @@ function addAllCharactersTwo(characters) {
     let likebutton = document.createElement('button')
     likebutton.innerHTML = 'Vote! By Order of the Peaky Blinders!'
     likebutton.id = "like-button"
-    likebutton.addEventListener('click', (e) => addAVote(e))
+    likebutton.addEventListener('click', () => addAVote(characters))
 
     let votes = document.createElement('h5')
     votes.innerText = `Votes: ${characters.votes}`
@@ -82,35 +103,6 @@ document.getElementById('next-button').addEventListener('click', (e) => {
         document.getElementById('characters-container').classList.toggle("classname")
         document.getElementById('characters-container-two').classList.toggle("classname")
 })
-
-
-//Adding the ability for the vote button to increment the db.json votes #
-
-// let addAVote = (characters) => {
-//     console.log(characters)
-//     fetch('http://localhost:3000/characters', {
-//         method: "PATCH",
-//         headers: 
-//              {
-//                  "Content-Type":"application/json",
-//                  Accept: "application/json"
-//              },
-//         body: JSON.stringify(
-//             characters.votes
-//         )
-//     })
-//     .then(resp => resp.json())
-//     .then(votes => {
-//         incrementVotes(votes)
-//     })
-// }
-
-// function incrementVotes(characters) {
-//     let votesNumber = characters.votes
-//     let votesContainer = document.getElementById('votes-id')
-//     votesContainer.value = votesNumber
-//     votesNumber++
-// }
 
 //submit function on the form with an alert and reset
 let submitButton = document.querySelector('#form')
