@@ -12,9 +12,10 @@ let fetchCharacters = () => {
 fetchCharacters();
 
 //Adding the ability for the vote button to increment the db.json votes #
-// let clicked = false;
+let clicked = false;
 let addAVote = (characters) => {
-    
+    if(!clicked) {
+    clicked=true;
     fetch(`http://localhost:3000/characters/${characters.id}`, {
         method: "PATCH",
         headers: 
@@ -29,6 +30,10 @@ let addAVote = (characters) => {
     })
     .then(resp => resp.json())
     .then(votes => console.log(votes))
+    alert('Thank you for voting!')
+} else {
+    alert('You already voted!')
+}
 }
 
 
