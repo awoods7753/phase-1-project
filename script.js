@@ -11,32 +11,6 @@ let fetchCharacters = () => {
 }
 fetchCharacters();
 
-//Adding the ability for the vote button to increment the db.json votes # & only allow one vote with alerts
-let clicked = false;
-let addAVote = (characters, e) => {
-    e.preventDefault();
-    if(!clicked) {
-    clicked=true;
-    fetch(`http://localhost:3000/characters/${characters.id}`, {
-        method: "PATCH",
-        headers: 
-             {
-                 "Content-Type":"application/json",
-                 Accept: "application/json"
-             },
-        body: JSON.stringify({
-           votes: characters.votes + 1
-        })
-    
-    })
-    .then(resp => resp.json())
-    .then(votes => votes.innerText = `Votes: ${characters.votes}`)
-    alert('Thank you for voting!')
-} else {
-    alert('You already voted!')
-}
-}
-
 
 //function to add the first five characters and their information to the character card on the DOM
 function addAllCharacters(characters) {
@@ -50,14 +24,13 @@ function addAllCharacters(characters) {
     let description = document.createElement('h4')
     description.innerText = `Bio: ${characters.description}`
 
+    let votes = document.createElement('h5')
+    votes.innerText = `Votes: ${characters.votes}`
+
     let likebutton = document.createElement('button')
     likebutton.innerHTML = 'Vote! By Order of the Peaky Blinders!'
     likebutton.id = "like-button"
-    likebutton.addEventListener('click', (e) => addAVote(characters, e))
-
-    let votes = document.createElement('h5')
-    votes.innerText = `Votes: ${characters.votes}`
-    votes.id = "votes-id"
+    likebutton.addEventListener('click',(e) => addAVote(characters, e))
 
     card.append(name, img, description, likebutton, votes)
     characterContainer.append(card)
@@ -95,13 +68,42 @@ function addAllCharactersTwo(characters) {
 
     let votes = document.createElement('h5')
     votes.innerText = `Votes: ${characters.votes}`
-    votes.id = "votes-id"
 
     card.append(name, img, description, likebutton, votes)
     characterContainer.append(card)
 }
 
+function reload() {
+    reload = location.reload();
+}
 
+//Adding the ability for the vote button to increment the db.json votes # & only allow one vote with alerts
+let clicked = false;
+let addAVote = (characters, e) => {
+    e.preventDefault();
+
+    if(!clicked) {
+    clicked=true;
+    fetch(`http://localhost:3000/characters/${characters.id}`, {
+        method: "PATCH",
+        headers: 
+             {
+                 "Content-Type":"application/json",
+                 Accept: "application/json"
+             },
+        body: JSON.stringify({
+           votes: characters.votes + 1
+        })
+    
+    })
+    .then(resp => resp.json())
+    .then(votes => console.log(votes))
+    alert('Thank you for voting!')
+} else {
+    alert('You already voted!')
+}
+reload();
+}
 
 //next button which hides the first five appended characters and shows the second set, vice-versa on click
 document.getElementById('next-button').addEventListener('click', (e) => {
