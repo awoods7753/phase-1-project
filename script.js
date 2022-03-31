@@ -73,17 +73,14 @@ function addAllCharactersTwo(characters) {
     characterContainer.append(card)
 }
 
+//function to reload the page after voting
 function reload() {
     reload = location.reload();
 }
 
-//Adding the ability for the vote button to increment the db.json votes # & only allow one vote with alerts
-let clicked = false;
+//Adding the ability for the vote button to increment the db.json votes with an alert
 let addAVote = (characters, e) => {
     e.preventDefault();
-
-    if(!clicked) {
-    clicked=true;
     fetch(`http://localhost:3000/characters/${characters.id}`, {
         method: "PATCH",
         headers: 
@@ -99,10 +96,7 @@ let addAVote = (characters, e) => {
     .then(resp => resp.json())
     .then(votes => console.log(votes))
     alert('Thank you for voting!')
-} else {
-    alert('You already voted!')
-}
-reload();
+    reload();
 }
 
 //next button which hides the first five appended characters and shows the second set, vice-versa on click
