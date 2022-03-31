@@ -11,9 +11,10 @@ let fetchCharacters = () => {
 }
 fetchCharacters();
 
-//Adding the ability for the vote button to increment the db.json votes #
+//Adding the ability for the vote button to increment the db.json votes # & only allow one vote with alerts
 let clicked = false;
-let addAVote = (characters) => {
+let addAVote = (characters, e) => {
+    e.preventDefault();
     if(!clicked) {
     clicked=true;
     fetch(`http://localhost:3000/characters/${characters.id}`, {
@@ -52,7 +53,7 @@ function addAllCharacters(characters) {
     let likebutton = document.createElement('button')
     likebutton.innerHTML = 'Vote! By Order of the Peaky Blinders!'
     likebutton.id = "like-button"
-    likebutton.addEventListener('click', () => addAVote(characters))
+    likebutton.addEventListener('click', (e) => addAVote(characters, e))
 
     let votes = document.createElement('h5')
     votes.innerText = `Votes: ${characters.votes}`
