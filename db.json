@@ -19,7 +19,7 @@
       "name": "Ada Shelby",
       "image": "https://i.imgur.com/eBfCuJH.jpg",
       "description": "Level headed, Tommy's Sister",
-      "votes": 81
+      "votes": 84
     },
     {
       "id": "4",
@@ -47,7 +47,7 @@
       "name": "Polly Shelby",
       "image": "https://i.imgur.com/XD2Ns0b.jpg",
       "description": "Matriarch of the family",
-      "votes": 89
+      "votes": 90
     },
     {
       "id": "8",
@@ -61,14 +61,14 @@
       "name": "Freddie Thorne",
       "image": "https://i.imgur.com/Zyjuqqn.jpg",
       "description": "Communist, marries Ada",
-      "votes": 19
+      "votes": 20
     },
     {
       "id": "10",
       "name": "Michael Grey",
       "image": "https://i.imgur.com/wdckNvS.jpg",
       "description": "Ends up a villain, Polly's son",
-      "votes": 62
+      "votes": 63
     }
   ]
 }
