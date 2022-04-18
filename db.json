@@ -5,70 +5,70 @@
       "name": "Thomas Shelby",
       "image": "https://i.imgur.com/utA2pWc.jpg",
       "description": "War hero, runs family",
-      "votes": 241
+      "votes": 244
     },
     {
       "id": "2",
       "name": "Arthur Shelby",
       "image": "https://i.imgur.com/QRq8quU.jpg",
       "description": "War hero, the wild one",
-      "votes": 221
+      "votes": 228
     },
     {
       "id": "3",
       "name": "Ada Shelby",
       "image": "https://i.imgur.com/eBfCuJH.jpg",
       "description": "Level headed, Tommy's Sister",
-      "votes": 84
+      "votes": 112
     },
     {
       "id": "4",
       "name": "Finn Shelby",
       "image": "https://i.imgur.com/4bxypgR.jpg",
       "description": "Sheltered, the youngest brother",
-      "votes": 55
+      "votes": 127
     },
     {
       "id": "5",
       "name": "John Shelby",
       "image": "https://i.imgur.com/9dCWm43.jpg",
       "description": "Highly intelligent younger brother",
-      "votes": 227
+      "votes": 230
     },
     {
       "id": "6",
       "name": "Grace Shelby",
       "image": "https://i.imgur.com/GnGNkra.jpg",
       "description": "Tommy's wife",
-      "votes": 120
+      "votes": 121
     },
     {
       "id": "7",
       "name": "Polly Shelby",
       "image": "https://i.imgur.com/XD2Ns0b.jpg",
       "description": "Matriarch of the family",
-      "votes": 90
+      "votes": 91
     },
     {
       "id": "8",
       "name": "Alfie Solomons",
       "image": "https://i.imgur.com/1Qi4PqL.jpg",
       "description": "A very likeable villain",
-      "votes": 190
+      "votes": 191
     },
     {
       "id": "9",
       "name": "Freddie Thorne",
       "image": "https://i.imgur.com/Zyjuqqn.jpg",
       "description": "Communist, marries Ada",
-      "votes": 20
+      "votes": 25
     },
     {
       "id": "10",
       "name": "Michael Grey",
       "image": "https://i.imgur.com/wdckNvS.jpg",
       "description": "Ends up a villain, Polly's son",
-      "votes": 63
+      "votes": 64
     }
   ]
 }

@@ -25,11 +25,12 @@ function addAllCharacters(characters) {
     description.innerText = `Bio: ${characters.description}`
 
     let votes = document.createElement('h5')
+    votes.id = "character-votes"
     votes.innerText = `Votes: ${characters.votes}`
 
     let likebutton = document.createElement('button')
     likebutton.innerHTML = 'Vote! By Order of the Peaky Blinders!'
-    likebutton.id = "like-button"
+    likebutton.className = "like-button"
     likebutton.addEventListener('click',(e) => addAVote(characters, e))
 
     card.append(name, img, description, likebutton, votes)
@@ -61,26 +62,24 @@ function addAllCharactersTwo(characters) {
     let description = document.createElement('h4')
     description.innerText = `Bio: ${characters.description}`
 
+    let votes = document.createElement('h5')
+    votes.id = "character-votes"
+    votes.innerText = `Votes: ${characters.votes}`
+
     let likebutton = document.createElement('button')
     likebutton.innerHTML = 'Vote! By Order of the Peaky Blinders!'
-    likebutton.id = "like-button"
+    likebutton.className = "like-button"
     likebutton.addEventListener('click', (e) => addAVote(characters, e))
 
-    let votes = document.createElement('h5')
-    votes.innerText = `Votes: ${characters.votes}`
 
     card.append(name, img, description, likebutton, votes)
     characterContainer.append(card)
 }
 
-//function to reload the page after voting
-function reload() {
-    reload = location.reload();
-}
-
 //Adding the ability for the vote button to increment the db.json votes with an alert
 let addAVote = (characters, e) => {
     e.preventDefault();
+    console.log(e.target.nextSibling)
     fetch(`http://localhost:3000/characters/${characters.id}`, {
         method: "PATCH",
         headers: 
@@ -94,9 +93,18 @@ let addAVote = (characters, e) => {
     
     })
     .then(resp => resp.json())
-    .then(votes => console.log(votes))
+    .then(function (data) {
+        dynamicallyUpdateVotes(data, e);
+    })
     alert('Thank you for voting!')
-    reload();
+}
+
+function dynamicallyUpdateVotes(characters, e) {
+    e.target.nextSibling.textContent =  `Votes: ${characters.votes}`
+    // let card = document.getElementById('character-card')
+    //     updatedVotes = document.getElementById('character-votes')
+    //     updatedVotes.innerText = `Votes: ${characters.votes}`
+    //     card.appendChild(updatedVotes)
 }
 
 //next button which hides the first five appended characters and shows the second set, vice-versa on click
