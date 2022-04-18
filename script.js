@@ -101,10 +101,6 @@ let addAVote = (characters, e) => {
 
 function dynamicallyUpdateVotes(characters, e) {
     e.target.nextSibling.textContent =  `Votes: ${characters.votes}`
-    // let card = document.getElementById('character-card')
-    //     updatedVotes = document.getElementById('character-votes')
-    //     updatedVotes.innerText = `Votes: ${characters.votes}`
-    //     card.appendChild(updatedVotes)
 }
 
 //next button which hides the first five appended characters and shows the second set, vice-versa on click
